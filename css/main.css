@@ -364,6 +364,7 @@ img {
 .menu-container-link.nav.link {
   position: relative;
   display: inline-block;
+  width: max-content;
 }
 
 .menu-container-link-action.current::after {
