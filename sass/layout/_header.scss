@@ -137,12 +137,13 @@
   }
   .menu-container-list {
     @media screen and (min-width: 768px) {
-      width: 290px;
+      // width: 290px;
       outline: 1px solid red;
     }
     @media screen and (min-width: 1200px) {
       outline: 1px solid red;
-      justify-content: space-around;
+      display: flex;
+      justify-content: center;
       align-items: center;
     }
     display: flex;
@@ -222,7 +223,7 @@
   .main-nav {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
+    align-items: center;
     width: 544px;
   }
 }

@@ -251,7 +251,6 @@ img {
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .menu-container-list {
-    width: 290px;
     outline: 1px solid red;
   }
 }
@@ -259,7 +258,8 @@ img {
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .menu-container-list {
     outline: 1px solid red;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -346,6 +346,7 @@ img {
   .main-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 544px;
   }
 }
