@@ -394,27 +394,27 @@
 //   //   justify-content: space-between;
 //   //   align-items: center;
 //   // }
-//   .page-logo {
-//     font-family: Raleway;
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 1.19;
-//     letter-spacing: 0.03em;
-//     color: var(--title-text-color);
-//     text-decoration: none;
-//     margin-top: 24px;
-//     margin-bottom: 25px;
-//   }
-//   .logo-color {
-//     font-family: Raleway;
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 1.19;
-//     letter-spacing: 0.03em;
-//     color: var(--accent-color);
-//   }
+.page-logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  text-decoration: none;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+.logo-color {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
 //   /* Навигация на другие страницы ========== */
 
 //   .site-nav {
