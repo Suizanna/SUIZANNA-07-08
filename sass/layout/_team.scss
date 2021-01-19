@@ -77,6 +77,7 @@
     border-radius: 50px;
     margin-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавный переход цвета при ховере*/
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon-list-link:nth-last-child(-n + 4) {
     margin-right: 0;
@@ -174,7 +175,8 @@
     height: 44px;
     border-radius: 50px;
     margin-right: 10px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавный переход цвета при ховере*/
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавный переход цвета при ховере*/
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon-list-link:nth-last-child(-n + 4) {
     margin-right: 0;
@@ -261,7 +263,7 @@
     border-radius: 50px;
     margin-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавный переход цвета при ховере*/
-
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:nth-last-child(-n + 4) {
       margin-right: 0;
     }

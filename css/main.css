@@ -95,7 +95,6 @@ img {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  /* outline: 1px solid red; */
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -364,7 +363,6 @@ img {
 .menu-container-link.nav.link {
   position: relative;
   display: inline-block;
-  width: max-content;
 }
 
 .menu-container-link-action.current::after {
@@ -399,6 +397,7 @@ img {
 .header {
   position: relative;
   border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .container-main {
@@ -476,10 +475,46 @@ img {
     display: flex;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .menu-container-list {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .menu-container-list {
+    width: 290px;
+    outline: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .menu-container-list {
+    outline: 1px solid red;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container-item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
@@ -488,9 +523,18 @@ img {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.166;
+  font-size: 14px;
+  line-height: 1.142;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container-link {
+    display: flex;
+    font-size: 18px;
+    line-height: 1.166;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .menu-container-link.nav:hover,
@@ -498,10 +542,24 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
-  .menu-container-item:not(:last-child) {
-    margin-bottom: 40px;
-  }
+.menu-container-link.contacts:hover,
+.menu-container-link.contacts:focus {
+  color: var(--accent-color);
+}
+
+.contact-item-svg-envelope:hover,
+.contact-item-svg-Mobile:hover,
+.contact-item-svg-envelope:focus,
+.contact-item-svg-Mobile:focus {
+  fill: var(--accent-color);
+}
+
+.contact-item-svg-envelope {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-item-svg-Mobile {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container-link.nav {
@@ -513,9 +571,11 @@ img {
   /*#757575;*/
 }
 
-.menu-container-link.navk:hover,
-.menu-container-link.nav:focus {
-  color: var(--accent-color);
+.contact-item-svg-envelope,
+.contact-item-svg-Mobile {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  /*#757575;*/
 }
 
 .main-nav {
@@ -532,20 +592,29 @@ img {
   }
 }
 
+.menu-contacts {
+  display: block;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-contacts {
     margin-top: 60px;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-mail {
     margin-bottom: 16px;
   }
 }
 
-.contact-item-svg-envelope,
-.contact-item-svg-Mobile {
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-  /*#757575;*/
+@media screen and (min-width: 768px) and (max-width: 1999px) {
+  .menu-mail {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -641,110 +710,22 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .item:not(:last-child) {
-    margin-right: 50px;
-  }
-  .menu-link.current::before {
-    opacity: 1;
-  }
-  .menu-link::before {
-    content: "";
-    display: inline-block;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-    left: 0px;
-    bottom: -32px;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
+.menu-link.current::before {
+  opacity: 1;
 }
 
-@media screen and (min-width: 1200px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
-  .container-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-bg-color);
-    height: 80px;
-  }
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .page-logo {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-    text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 25px;
-  }
-  .logo-color {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
-  }
-  /* Навигация на другие страницы ========== */
-  .site-nav {
-    display: flex;
-    margin-left: 93px;
-    border: 1px solid transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* outline: 1px solid transparent;*/
-  }
-  .site-nav .item + .item {
-    margin-left: 50px;
-  }
-  .menu-link {
-    position: relative;
-  }
-  .menu-link.current::before {
-    opacity: 1;
-  }
-  .menu-link::before {
-    content: "";
-    display: inline-block;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-    left: 0px;
-    bottom: -32px;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
-  .site-nav .link {
-    /*font-family: Roboto;
-    font-style: normal;*/
-    display: block;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--title-text-color);
-    text-decoration: none;
-  }
-  .site-nav .link:hover, .site-nav .link:focus, .site-nav .link:active, .site-nav .link.current {
-    color: var(--accent-color);
-  }
-  /*.site-nav .link.visited {} */
+.menu-link::before {
+  content: "";
+  display: inline-block;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  bottom: -32px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -1320,6 +1301,7 @@ img {
     margin-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /*плавный переход цвета при ховере*/
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon-list-link:nth-last-child(-n + 4) {
     margin-right: 0;
@@ -1409,6 +1391,7 @@ img {
     margin-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /*плавный переход цвета при ховере*/
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon-list-link:nth-last-child(-n + 4) {
     margin-right: 0;
@@ -1499,6 +1482,7 @@ img {
     margin-right: 10px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /*плавный переход цвета при ховере*/
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon-list-link:nth-last-child(-n + 4) {
     margin-right: 0;
@@ -1759,7 +1743,7 @@ img {
     height: 44px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .social-list-svg {
     width: 20px;
@@ -1769,7 +1753,8 @@ img {
   .social-list-svg {
     fill: var(--primary-bg-color);
   }
-  .social-list-link:hover {
+  .social-list-link:hover,
+  .social-list-link:focus {
     background-color: var(--accent-color);
   }
   /* ПОДПИШИСЬ */
@@ -1919,6 +1904,7 @@ img {
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .social-list-svg {
     width: 20px;
@@ -1928,7 +1914,12 @@ img {
   .social-list-svg {
     fill: var(--primary-bg-color);
   }
-  .social-list-link:hover {
+  .social-list-svg:hover,
+  .social-list-svg:focus {
+    fill: var(--primary-bg-color);
+  }
+  .social-list-link:hover,
+  .social-list-link:focus {
     background-color: var(--accent-color);
   }
   /* ПОДПИШИСЬ */
@@ -2051,8 +2042,9 @@ img {
     background: rgba(255, 255, 255, 0.1);
     /* margin-bottom: 100px;*/
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .social-list-link:hover {
+  .social-list-link:hover, .social-list-link:focus {
     background-color: var(--accent-color);
   }
   .social-list-svg {
@@ -2062,10 +2054,6 @@ img {
   }
   .social-list-svg {
     fill: var(--primary-bg-color);
-  }
-  .social-list-link:hover,
-  .social-list-link:focus {
-    background-color: var(--accent-color);
   }
   /*================*/
   /*=======ФУТЕР ЛОГО==========*/

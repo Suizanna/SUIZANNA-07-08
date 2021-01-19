@@ -13,19 +13,19 @@
 </head>
 <body>
   <!--Шапка второй страницы-->
-  <header class="header">
+  <!-- <header class="header">
     <div class="container container-main">
         <nav class="main-nav">
             <a class="page-logo link" href="./index.html"><span class="logo-color link">Web</span>Studio</a>
-            <!--Навигация на другие страницы-->
-            <ul class="site-nav">
+            Навигация на другие страницы-->
+            <!-- <ul class="site-nav">
                 <li class="item"><a class="link menu-link" href="./index.html">Студия</a></li>
                 <li class="item"><a class="link menu-link current" href="./portfolio.html">Портфолио</a></li>
                 <li class="item"><a class="link menu-link" href="">Контакты</a></li>
             </ul>
-        </nav>
+        </nav> -->
     <!--Контакты-->
-    <ul class="contact-nav">
+    <!-- <ul class="contact-nav">
         <li class="contact-item">
             <a href="mailto:info@devstudio.com" class="link">
                 <svg class="contact-item-svg-envelope">
@@ -40,8 +40,57 @@
                 </svg>+38 096 111 11 11
             </a>   
         </li>
-    </ul>             
-   </div>
+    </ul>              -->
+   <!-- </div>  -->
+<!-- </header> -->
+<!--Шапка страницы-->
+<header class="header">
+  <div class="container container-main">
+
+    <a class="page-logo link" href="./index.html"><span class="logo-color link">Web</span>Studio</a>
+    <div class="menu-container" id="menu-container" data-menu>
+      <nav class="main-nav">
+        
+        <!--Навигация на другие страницы-->
+        <ul class="menu-container-list is-open">
+          <li class="menu-container-item">
+            <a href="./index.html" class="menu-container-link nav link menu-container-link-action">Студия</a>
+          </li>
+          <li class="menu-container-item">
+            <a class="menu-container-link nav link  menu-container-link-action current" href="#">Портфолио</a>
+          </li>
+          <li class="menu-container-item">
+            <a class="menu-container-link nav link" href="">Конакты</a>
+          </li>
+        </ul>
+
+        <!-- Контакты -->
+        <ul class="menu-contacts">
+          <li class="menu-mail">
+            <a class="menu-container-link contacts link" href="mailto:info@devstudio.com">
+              <svg class="contact-item-svg-envelope" width="16" height="12">
+                <use href="./img/sprite.svg.svg#icon-envelope"></use>
+              </svg>info@devstudio.com
+            </a>
+          </li>
+          <li class="menu-tell">
+            <a class="menu-container-link contacts link" href="tel:+380961111111">
+              <svg class="contact-item-svg-Mobile" width="10" height="15">
+                <use href="./img/sprite.svg.svg#icon-Mobile"></use>
+              </svg>+38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- КНОПКА-МЕНЮ-->
+    <button type="btn" class="menu-btn is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+      <svg width="40" height="40" aria-label="переключатель мобильного меню">
+        <use class="icon-cross" href="./img/sprite.svg.svg#icon-cross"></use>
+        <use class="icon-menu" href="./img/sprite.svg.svg#icon-menu"></use>
+      </svg>
+    </button>
 </header>
 <main>
     <!--Герой Портфолио-->
