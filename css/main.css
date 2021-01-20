@@ -597,6 +597,12 @@ img {
 }
 
 @media screen and (min-width: 768px) and (min-width: 1200px) {
+  .menu-contacts {
+    margin-left: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .page-logo {
     margin-right: 93px;
   }
@@ -633,6 +639,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .menu-contacts {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
