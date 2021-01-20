@@ -154,7 +154,6 @@ img {
 
 .header {
   position: relative;
-  border: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }
 
@@ -171,11 +170,6 @@ img {
     display: flex;
     align-items: center;
   }
-}
-
-.container-main {
-  display: flex;
-  align-items: center;
 }
 
 .menu-btn {
@@ -256,11 +250,7 @@ img {
   }
 }
 
-.menu-container-list {
-  display: flex;
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu-container-list {
     display: flex;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -278,13 +268,14 @@ img {
     margin-right: 50px;
   }
   .menu-container-link {
-    display: block;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.142;
     letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -331,6 +322,9 @@ img {
     fill: var(--primary-text-color);
     /*#757575;*/
   }
+  .menu-container-link.nav {
+    position: relative;
+  }
   .main-nav {
     display: block;
     justify-content: center;
@@ -370,6 +364,9 @@ img {
   .menu-container {
     display: flex;
   }
+  .menu-container-list {
+    display: flex;
+  }
   .main-nav {
     display: flex;
     align-items: center;
@@ -377,30 +374,10 @@ img {
     border: 1px solid transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 905px;
-    outline: 1px solid blue;
-  }
-  .menu-contacts {
-    display: flex;
-    margin-left: auto;
-    align-self: flex-end;
-    cursor: pointer;
-    outline: 1px solid red;
-  }
-  .menu-mail {
-    margin-right: 50px;
-    padding-top: 32px;
-    margin-bottom: 32px;
-  }
-  .menu-tell {
-    padding-top: 32px;
-    margin-bottom: 32px;
-  }
-  .menu-contacts .menu-container-link .link {
-    align-items: center;
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   .menu-contacts {
     display: block;
     flex-wrap: wrap;
@@ -409,25 +386,61 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
+  .menu-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-contacts {
     margin-top: 60px;
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-mail {
     margin-bottom: 16px;
+    outline: 1px solid red;
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1999px) {
+@media screen and (min-width: 768px) and (max-width: 1999px) {
   .menu-mail {
     margin-bottom: 10px;
+    outline: 1px solid red;
+  }
+  .menu-contacts {
+    padding-top: 32px;
+    margin-bottom: 32px;
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 320px) and (max-width: 1999px) {
+@media screen and (min-width: 1200px) {
+  .menu-mail {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+  }
+  .menu-contacts {
+    padding-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.contact-item-svg-envelope,
+.contact-item-svg-Mobile {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  /*#757575;*/
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1999px) {
   .page-logo {
     display: block;
     font-family: Raleway;
@@ -453,27 +466,16 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .page-logo {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-    text-decoration: none;
     margin-top: 24px;
     margin-bottom: 25px;
   }
   .logo-color {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
   }
 }
 
