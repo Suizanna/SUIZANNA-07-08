@@ -55,6 +55,7 @@
   position: relative;
   border: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+  
 }
 
 @media screen and (min-width: 320px) and (max-width: 1199px) {
@@ -68,8 +69,16 @@
   .container-main {
     display: flex;
     align-items: center;
-    height: 80px;
+    // height: 80px;
   }
+}
+.container-main {
+  //div
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  // background-color: var(--primary-bg-color);
+  // height: 80px;
 }
 
 .menu-btn {
@@ -104,16 +113,13 @@
   fill: var(--accent-color);
 }
 //=========НАВИГАЦИЯ-MOBILE==========
-
 .menu-container {
   @media screen and (max-width: 767px) {
     background-color: var(--primary-bg-color);
+    z-index: 1;
   }
   text-align: center;
-  padding: 60px 0;
-  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-  //   0px 1px 3px rgba(165, 158, 158, 0.16);
-  // transform: translate(-50%, -50%) scale(1);
+  padding: 60px 0;;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &.is-open {
     display: block;
@@ -132,11 +138,11 @@
 // data-menu
 @media screen and (min-width: 768px) {
   .menu-container {
-    //div data-menu
     display: flex;
-    // align-items: center;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
   }
+}
+
   //nav
   @media screen and (min-width: 1200px) {
     .main-nav {
@@ -147,21 +153,25 @@
   }
   //ul Навигация на другие страницы
   .menu-container-list {
+    @media screen and (min-width: 768px) {
+      // width: 290px;
+      //   outline: 1px solid red;
+    }
     // @media screen and (min-width: 768px) {
-    //   // width: 290px;
-    //   outline: 1px solid red;
+    //   .menu-container-list {
+    //     display: flex;
+    //   }
     // }
     @media screen and (min-width: 1200px) {
-      outline: 1px solid red;
       display: flex;
-      margin-left: 93px;
+      // margin-left: 93px;
       // border: 1px solid transparent;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       // margin-right: 305px;
     }
     display: flex;
   }
-}
+
 @media screen and (max-width: 767px) {
   .menu-container-item:not(:last-child) {
     margin-bottom: 40px;
@@ -172,7 +182,7 @@
     margin-right: 50px;
     // outline: 1px solid red;
   }
-}
+
 .menu-container-link {
   display: block;
   font-family: Roboto;
@@ -221,32 +231,96 @@
   margin-right: 10px;
   fill: var(--primary-text-color); /*#757575;*/
 }
-
 // .menu-container-link.nav {
-//     position: relative;
-//   }
+//   position: relative;
+// }
 
-//=======TELL=================
+//=======Навигация-на-другие-страницы===============
 .main-nav {
   display: block;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 544px;
   }
+  // .menu-contacts {
+  //   margin-left: 84px;
+  // }
+
 }
-.menu-contacts {
-  display: block;
-  flex-wrap: wrap;
-  cursor: pointer;
-  // margin-left: 84px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.container-main {
+  border-bottom: 1px solid #ececec;
+  height: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+.container-main {
+  height: 80px;
+}
+}
+@media screen and (min-width: 1200px) {
+  .container-main {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    // background-color: var(--primary-bg-color);
+    height: 80px;
+  }
+  .menu-container {
+    display: flex;
+  }
+ 
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // margin-left: 93px;
+    width: 905px;
+    outline: 1px solid blue;
+
+  }
+  //=======Контакты-TELL=================
+  .menu-contacts {
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+    cursor: pointer;
+    // margin-left: 300px;
+    outline: 1px solid red;
+  }
+  //menu-item
+  .menu-mail {
+    margin-right: 50px;
+    padding-top: 32px;
+    margin-bottom: 32px;
+  }
+  .menu-tell {
+    padding-top: 32px;
+    margin-bottom: 32px;
+  }
+ .menu-contacts .menu-container-link .link {
+    align-items: center;
+  }
+  // .menu-contacts .menu-container-link {
+  //   display: block;
+  // }
+}
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .menu-contacts {
+    display: block;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-contacts {
@@ -486,3 +560,4 @@
 //   // }
 //   /*.site-nav .link.visited {} */
 // }
+}
