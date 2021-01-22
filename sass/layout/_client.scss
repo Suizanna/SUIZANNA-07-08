@@ -78,20 +78,19 @@
   .client-list {
     display: flex;
     flex-wrap: wrap;
-    cursor: pointer;
+    cursor: pointer;;
   }
   .client-item {
-    width: 210px;
+     width: 226px;
     height: 90px;
   }
 
   .client-item:not(:nth-last-child(-n + 3)) {
     // верхние 3-ри
     margin-bottom: 30px;
-    // outline: 1px solid red;
   }
   .client-item:nth-child(3n + 2) {
-    //каждая 2-я и 3х в ряду
+    //каждая 2-я из 3х в ряду
     margin-right: 30px;
     margin-left: 30px;
   }
@@ -104,7 +103,7 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    width: 210px;
+    width: 226px;
     height: 90px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
